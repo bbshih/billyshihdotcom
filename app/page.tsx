@@ -48,9 +48,6 @@ export default function Home() {
               pulling in data from various third party sources to keep the site
               updated.
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
           </ul>
         </div>
         <a href="/resume.pdf">PDF Resume</a>
@@ -73,13 +70,15 @@ export default function Home() {
           <li>Apple Vision Pro actually being good</li>
           <li>Eating cookies without guilt</li>
         </ul>
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center space-y-4">
           <a
             href="mailto:me@billyshih.com"
             className="border-1 border-emerald-600 bg-emerald-400 text-white rounded p-4 shadow-md hover:shadow-lg hover:bg-emerald-500 transition-colors duration-500 ease-in-out no-underline hover:text-white"
           >
             Contact me
           </a>
+          <a href="https://www.linkedin.com/in/bshih/">LinkedIn</a>
+          <a href="https://www.twitter.com/billyeatstofu/">X aka Twitter</a>
         </div>
       </SectionFade>
     </main>
