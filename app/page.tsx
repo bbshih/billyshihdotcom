@@ -14,6 +14,29 @@ function Headline({
   )
 }
 
+function ListItem({
+  title,
+  href,
+  children,
+}: {
+  title?: string
+  href?: string
+  children: React.ReactNode
+}) {
+  return (
+    <li>
+      {href ? (
+        <>
+          <a href={href}>{title}</a>:{" "}
+        </>
+      ) : (
+        title + ": " || ""
+      )}
+      {children}
+    </li>
+  )
+}
+
 export default function Home() {
   return (
     <main className="flex flex-col space-y-8 w-full">
@@ -34,25 +57,40 @@ export default function Home() {
           intentionally build tools with deep vision, compassion and sincerity.
         </p>
         <div>
-          <strong>Things I&apos;ve shipped</strong>
-          <ul className="list-disc list-inside">
-            <li>
-              <a href="https://jpg.space">JPG</a>: NFT gated experience allowing
-              users to submit and vote on NFTs. Building reputation that was
-              represented in the NFT and on the platform.
-            </li>
-            <li>
-              <a href="http://amazon.com/amsc">Amazon Sustainbility:</a> I
-              rebuilt the Second Chance portal in React in compliance with all
+          <strong className="mb-2">Things I&apos;ve shipped</strong>
+          <ul className="space-y-2">
+            <ListItem href="https://jpg.space" title="JPG">
+              NFT gated experience allowing users to submit and vote on NFTs.
+              Building reputation that was represented in the NFT and on the
+              platform.
+            </ListItem>
+
+            <ListItem
+              href="https://aws.amazon.com/aws-cost-management/aws-budgets/"
+              title="AWS Budgets"
+            >
+              Rewrote the AWS Budgets Console into a TypeScript React/Redux app
+              allowing AWS users to setup budgets and track their spend.
+            </ListItem>
+            <ListItem
+              href="http://amazon.com/amsc"
+              title="Amazon Sustainbility"
+            >
+              I rebuilt the Second Chance portal in React in compliance with all
               language and build requirements. Streamlining workflows for
-              pulling in data from various third party sources to keep the site
-              updated.
-            </li>
+              pulling in data from external teams, getting translations and
+              presenting it to keep the site up to date.
+            </ListItem>
+            <ListItem title="Caresi (defunct)">
+              React app that guided cancer patients through their treatment
+              experience. Patients were able to track appointments, labs and
+              care team information.
+            </ListItem>
           </ul>
         </div>
-        <a href="/resume.pdf">PDF Resume</a>
+        <a href="/resume.pdf">Download Resume</a>
         <Headline>Interests</Headline>
-        <ul>
+        <ul className="space-y-2">
           <li>Web3: Ownership, decentralization, open source and community</li>
           <li>
             AI: Giving new tools to open up opportunity and creativity to
@@ -63,7 +101,7 @@ export default function Home() {
           <li>Content Creation: Everyone can create. No gaterkeepers</li>
         </ul>
         <Headline>Dreams</Headline>
-        <ul>
+        <ul className="space-y-2">
           <li>A world where everyone can pursue their aspirations</li>
           <li>A world without suffering</li>
           <li>A house with more windows than walls</li>
