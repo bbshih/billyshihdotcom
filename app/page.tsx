@@ -74,7 +74,7 @@ export default function Home() {
             </ListItem>
             <ListItem
               href="http://amazon.com/amsc"
-              title="Amazon Sustainbility"
+              title="Amazon Sustainability"
             >
               I rebuilt the Second Chance portal in React in compliance with all
               language and build requirements. Streamlining workflows for
