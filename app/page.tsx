@@ -60,9 +60,10 @@ export default function Home() {
           <strong className="mb-2">Things I&apos;ve shipped</strong>
           <ul className="space-y-2">
             <ListItem href="https://jpg.space" title="JPG">
-              NFT gated experience allowing users to submit and vote on NFTs.
-              Building reputation that was represented in the NFT and on the
-              platform.
+              NFT gated experience allowing users to submit and vote on
+              canonical lists of NFT artwork (e.g. onchain, conceptual). Success
+              or failure in votes determined reputation that was represented in
+              the NFT and on the platform.
             </ListItem>
 
             <ListItem
@@ -88,7 +89,7 @@ export default function Home() {
             </ListItem>
           </ul>
         </div>
-        <a href="/resume.pdf">Download Resume</a>
+        <a href="/Billy Shih - Resume.pdf">Download Resume</a>
         <Headline>Interests</Headline>
         <ul className="space-y-2">
           <li>Web3: Ownership, decentralization, open source and community</li>
